@@ -13,19 +13,20 @@ class Form extends React.Component {
 
   handleOnChange = (event) => {
     this.setState({
-      [event.target.name] : event.target.value
+      [event.target.name] : event.target.value,
+      name: `${this.state.year} ${this.state.make} ${this.state.model}`
     })
   }
 
   render() {
     return (
       <form onSubmit={this.handleAddCar}>
-        <input placeholder="Year" name="Year" onChange={this.handleOnChange}/>
-        <input placeholder="Make" name="Make" onChange={this.handleOnChange}/>
-        <input placeholder="Model" name="Model" onChange={this.handleOnChange}/>
-        <input placeholder="Color" name="Color" onChange={this.handleOnChange}/>
-        <input placeholder="Price" name="Price" onChange={this.handleOnChange}/>
-        <input placeholder="Seller" name="Seller" onChange={this.handleOnChange}/>
+        <input placeholder="Year" name="year" onChange={this.handleOnChange}/>
+        <input placeholder="Make" name="make" onChange={this.handleOnChange}/>
+        <input placeholder="Model" name="model" onChange={this.handleOnChange}/>
+        <input placeholder="Color" name="color" onChange={this.handleOnChange}/>
+        <input placeholder="Price" name="price" onChange={this.handleOnChange}/>
+        <input placeholder="Seller" name="seller" onChange={this.handleOnChange}/>
         <button type="submit">Submit</button>
       </form>
     );
