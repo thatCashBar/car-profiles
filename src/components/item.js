@@ -1,12 +1,14 @@
 import React from "react";
 
-const Item = () => {
-  <div>
-    <div></div>
+const Item = (para) => {
+  return (
     <div>
-      <button onClick={handleDelete}>Delete</button>
+      <div>
+        <p>{para.item.name}</p>
+        {/* <button onClick={handleDelete}>Delete</button> */}
+      </div>
     </div>
-  </div>;
+  )
 };
 
 export default Item;
