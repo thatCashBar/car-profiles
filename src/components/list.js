@@ -21,15 +21,24 @@ class List extends React.Component {
     })
   }
 
+  handleSubmit = (newCar) => {
+    console.log("new car = ", newCar);
+    this.setState({
+      cars : this.state.cars.concat(newCar),
+      showForm: false
+    })
+  };
+
   displayCars = () => {
     if (this.state.showForm)
     {
       return (
-        <Form/>
+        <Form handleSubmit={this.handleSubmit}/>
       );
     }
     else
     {
+      console.log("else");
       return (
         this.state.cars.map((car, index) => { 
           return (

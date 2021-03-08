@@ -6,8 +6,9 @@ class Form extends React.Component {
     // car: values
   }
 
-  handleSubmit = (event) => {
+  handleAddCar = (event) => {
     event.preventDefault();
+    this.props.handleSubmit(this.state);
   }
 
   handleOnChange = (event) => {
@@ -18,7 +19,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleAddCar}>
         <input placeholder="Year" name="Year" onChange={this.handleOnChange}/>
         <input placeholder="Make" name="Make" onChange={this.handleOnChange}/>
         <input placeholder="Model" name="Model" onChange={this.handleOnChange}/>
